@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 df = pd.read_csv('starwars.csv')
 
-arq = open('starwars.csv', encoding='utf-8')
+arq = open('starwars.csv')
 for registro in csv.DictReader(arq, delimiter=','):
 
   print(registro)
