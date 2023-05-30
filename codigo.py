@@ -6,5 +6,5 @@ def listar_conteudo(starwars_csv):
         for linha in leitor_csv:
             print(linha)
            
-            arquivo_csv = 'This Pc/Downloads/articles.csv'
+            arquivo_csv = 'This Pc/Downloads/starwars.csv'
 listar_conteudo(arquivo_csv)
