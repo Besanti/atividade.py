@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 import requests
-import streamlit
+import streamlit as st
 
 df = pd.read_csv('starwars.csv')
 
