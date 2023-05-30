@@ -8,5 +8,5 @@ df = pd.read_csv('starwars.csv')
 arq = open('starwars.csv')
 for registro in csv.DictReader(arq, delimiter=','):
 
-st.write(registro)
-st.dataframe(registro)
+ st.write(registro)
+ st.dataframe(registro)
