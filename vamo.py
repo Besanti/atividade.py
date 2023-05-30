@@ -1,7 +1,7 @@
 import csv
 import streamlit as st
 
-arquii = 'C:/tidyverse/dplyr/data-raw/starwars.csv'
+arquii = 'C:dplyr/data-raw/starwars.csv'
 
 def listar_conteudo(arquii):
     with open(arquii, 'r') as arquivo_csv:
