@@ -6,17 +6,18 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('starwars.csv')
 
-chart_data = pd.DataFrame(
-    np.df(2, 3),
-    columns=["name", "height", "mass"])
+ages_count = df.Age.value_counts()
 
+x = ages_count.index
+y = ages_count.values
 
-df = pd.read_csv('starwars.csv')
+plt.bar(sorted(x),y)
+plt.tittle('Star Wars Gráfico')
 
-arq = open('starwars.csv')
-for registro in csv.DictReader(arq, delimiter=','):
+for index, value in enumerate(y):
+    plt.text(index - 0,4, value, str(value))
+    
+plt.show();
 
-
- st.dataframe(registro)
 
 st.bar_chart(df)
