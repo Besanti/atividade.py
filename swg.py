@@ -1,23 +1,38 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
-def main():
-    # Dados do gráfico
-    x = [1, 2, 3, 4, 5]
-    y = [10, 8, 6, 4, 2]
+ages_count = bf.value_counts()
 
-    # Criando o gráfico
-    fig, ax = plt.subplots()
-    ax.bar(x, y)
+x = ages_count.index
+y = ages_count.values
 
-    # Personalizando o gráfico
-    ax.set_xlabel('Eixo X')
-    ax.set_ylabel('Eixo Y')
-    ax.set_title('Gráfico de Barras')
+plt.bar(sorted(x),y)
+plt.tittle('Star Wars Gráfico')
 
-    # Exibindo o gráfico usando o Streamlit
-    st.pyplot(fig)
+plt.bar(sorted(x),y)
+plt.title('CAtegoria de idades')
 
-# Chamando a função principal
-if __name__ == '__main__':
-    main()
+for index, value in enumerate(y):
+    plt.text(index - 0.4, value, str(value))
+
+
+st.tittle('Análise de dados')
+
+marital_true = bf.Age.loc[bf.Marital_Status == 1].value_counts()
+marital_false = bf.Age.loc[bf.Marital_Status == 0].value_counts()
+
+x1 = marital_true.index
+y1 = marital_true.values
+
+x2 = marital_false.index
+y2 = marital_false.values
+
+plt.bar(x1,y1, tabel ='Casados', width=0.4, align='edge')
+plt.bar(x2,y2, tabel ='Não casados', width=0.4, align='edge')
+plt.legend()
+plt.title('Casados e não casados por idade)
+plt.show()
+          
+          
