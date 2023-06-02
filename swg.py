@@ -1,12 +1,5 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-import csv
-import matplotlib.pyplot as plt
 from bokeh.plotting import figure
-
-import streamlit as st
-
 
 x = [1, 2, 3, 4, 5]
 y = [6, 7, 2, 4, 5]
