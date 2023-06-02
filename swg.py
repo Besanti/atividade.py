@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+bf = pd.read_csv('./sample_data/BlackFriday.csv')
+
 ages_count = bf.value_counts()
 
 x = ages_count.index
