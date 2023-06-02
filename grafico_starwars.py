@@ -6,7 +6,7 @@ import csv
 df = pd.read_csv('starwars.csv')
 
 chart_data = pd.DataFrame(
-    np.starwars.cvs(2, 3),
+    np.df(2, 3),
     columns=["name", "height", "mass"])
 
 st.bar_chart(df)
