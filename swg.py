@@ -32,7 +32,7 @@ y2 = marital_false.values
 plt.bar(x1,y1, tabel ='Casados', width=0.4, align='edge')
 plt.bar(x2,y2, tabel ='Não casados', width=0.4, align='edge')
 plt.legend()
-plt.title('Casados e não casados por idade)
+plt.title('Casados e não casados por idade')
 plt.show()
           
           
