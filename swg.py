@@ -1,14 +1,23 @@
 import streamlit as st
-from bokeh.plotting import figure
+import matplotlib.pyplot as plt
 
-x = [1, 2, 3, 4, 5]
-y = [6, 7, 2, 4, 5]
+def main():
+    # Dados do gráfico
+    x = [1, 2, 3, 4, 5]
+    y = [10, 8, 6, 4, 2]
 
-p = figure(
-    title='simple line example',
-    x_axis_label='x',
-    y_axis_label='y')
+    # Criando o gráfico
+    fig, ax = plt.subplots()
+    ax.bar(x, y)
 
-p.line(x, y, legend_label='Trend', line_width=2)
+    # Personalizando o gráfico
+    ax.set_xlabel('Eixo X')
+    ax.set_ylabel('Eixo Y')
+    ax.set_title('Gráfico de Barras')
 
-st.bokeh_chart(p, use_container_width=True)
+    # Exibindo o gráfico usando o Streamlit
+    st.pyplot(fig)
+
+# Chamando a função principal
+if __name__ == '__main__':
+    main()
