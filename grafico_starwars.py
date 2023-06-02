@@ -8,4 +8,4 @@ chart_data = pd.DataFrame(
     np.starwars.cvs(2, 3),
     columns=["name", "height", "mass"])
 
-st.bar_chart(chart_data)
+st.bar_chart(df)
