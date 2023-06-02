@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 
 bf = pd.read_csv('./sample_data/BlackFriday.csv')
 
+st.tittle('Análise de dados')
+
 ages_count = bf.value_counts()
 
 x = ages_count.index
@@ -20,7 +22,7 @@ for index, value in enumerate(y):
     plt.text(index - 0.4, value, str(value))
 
 
-st.tittle('Análise de dados')
+
 
 marital_true = bf.Age.loc[bf.Marital_Status == 1].value_counts()
 marital_false = bf.Age.loc[bf.Marital_Status == 0].value_counts()
@@ -37,4 +39,4 @@ plt.legend()
 plt.title('Casados e não casados por idade')
 plt.show()
           
-          
+st.pyplot()
