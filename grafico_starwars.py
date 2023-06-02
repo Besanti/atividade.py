@@ -10,4 +10,13 @@ chart_data = pd.DataFrame(
     np.df(2, 3),
     columns=["name", "height", "mass"])
 
+
+df = pd.read_csv('starwars.csv')
+
+arq = open('starwars.csv')
+for registro in csv.DictReader(arq, delimiter=','):
+
+
+ st.dataframe(registro)
+
 st.bar_chart(df)
